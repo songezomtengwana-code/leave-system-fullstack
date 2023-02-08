@@ -1,0 +1,27 @@
+<div class="login">
+  <form action="SUBMIT" class="login-form">
+    <div class="form-header">Log In</div>
+    <div class="errbox">
+      <div class="errbox-text"></div>
+      <div class="close bi bi-x" (click)="handleClearErr()"></div>
+    </div>
+    <div class="form-body">
+      <div class="body-input">
+        <input [(ngModel)]="_admin.email" type="email" name="email" required>
+        <label for="email">Email</label>
+      </div>
+      <div class="body-input">
+        <input [(ngModel)]="_admin.password" name="password" type="password" required>
+        <label for="password">Password</label>
+      </div>
+    </div>
+    <div class="form-bottom" (click)="handleAuth()">
+      <div class="button-text">Log In</div>
+      <div class="button-spinner">
+        <mat-progress-spinner style="
+        width: 30px;
+        height: 30px;" mode="indeterminate" color="black" [strokeWidth]="10"></mat-progress-spinner>
+      </div>
+    </div>
+  </form>
+</div>

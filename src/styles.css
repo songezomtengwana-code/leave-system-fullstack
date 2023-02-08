@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --main: #009c53;
+  --seocondary: #18794b;
+  --background: #ffffff;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--background) !important;
+  color: black;
+}
+
+.component-title {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+mat-expansion-panel-header {
+  padding: 2rem !important;
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  background: white !important;
+  color: black !important;
+  border-radius: 0px !important;
+}
+
+.mat-expansion-panel-body {
+  background: white !important;
+}
+
+div#cdk-accordion-child-0 {
+  background: white !important;
+}
+
+mat-expansion-panel.mat-expansion-panel.ng-tns-c90-0.ng-star-inserted.mat-expanded.mat-expansion-panel-spacing {
+  background: white !important;
+}

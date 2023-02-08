@@ -1,0 +1,29 @@
+<nav class="nav">
+  <div class="nav-user">
+    <div class="user-image">
+      <img [src]="profile.photoPath" alt="" srcset="">
+    </div>
+    <div class="user-content">
+      <div class="user-content-fullname">{{profile.firstName}} {{profile.lastName}}</div>
+      <div class="user-content-tag">{{ profile.tag}}</div>
+      <div class="user-content-department">{{ profile.department }}</div>
+    </div>
+  </div>
+  <div class="nav-routes">
+    <a routerLink="/dashboard" class="route"><i class="bi bi-dash-circle"></i>Dashboard</a>
+    <a routerLinkActive="route-active" routerLink="profile" class="route"><i class="bi bi-person"></i>My Profile</a>
+    <a routerLinkActive="route-active" routerLink="calender" class="route"><i
+        class="bi bi-calendar-check"></i>Calender</a>
+    <a routerLinkActive="route-active" routerLink="notifications" class="route"><i class="bi bi-bell"></i>
+      Notifications<div class="badge">{{ requests.length }}</div>
+    </a>
+    <a routerLinkActive="route-active" routerLink="workspace" class="route"><i
+        class="bi bi-code-slash"></i>Workdspace</a>
+  </div>
+  <div class="logout">
+    <button class="logout-button" routerLink="/login">
+      <div class="bi bi-escape"></div>
+      <div class="button-text">logout</div>
+    </button>
+  </div>
+</nav>

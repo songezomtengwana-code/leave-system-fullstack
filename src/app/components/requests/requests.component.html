@@ -1,0 +1,29 @@
+<div class="requests">
+  <mat-accordion [multi]="true" [hideToggle]="false" style="background-color: #ededed !important;">
+    <mat-expansion-panel [hideToggle]="false">
+      <mat-expansion-panel-header>Pending Requests <div class="badge">{{ requests.length }}</div>
+      </mat-expansion-panel-header>
+      <section class="requset-cards" *ngFor="let request of requests">
+        <div class="cards-body" *ngIf="request.isApproved === false">
+          <div class="body-from">
+            {{ request.from }}
+          </div>
+          <div class="body-duration">
+            <div class="duration-from">{{ request.date }} {{ request.month }}</div> February
+          </div>
+          <div class="body-reason">
+            {{ request.reason }}
+          </div>
+          <mat-action-row>
+            <button mat-button (click)="handleDeleteRequest(request.id)">
+              <div class="bi bi-trash"></div>
+            </button>
+          </mat-action-row>
+        </div>
+      </section>
+      <div class="requsets-empty" *ngIf="requests.length < 1">
+        <h3>No Pending Requsets</h3>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

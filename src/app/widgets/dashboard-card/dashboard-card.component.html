@@ -1,0 +1,54 @@
+<section *ngIf="horizontal === 'active'" class="horizontal">
+  <div class="horizontal-card" (click)="handleCardActivity()">
+    <div class="horizontal-card-container">
+      <div class="horizontal-card-left">
+        <div class="horizontal-card-circle">
+        </div>
+      </div>
+      <div class="horizontal-card-right">
+        <div class="right-question">
+          <span class="question">Leaves Taken</span> :
+          <span style="color: #7f00ff; font-weight: bold;">{{ profile.takenLeaveCount }}</span>
+        </div>
+        <div class="right-question">
+          <span class="question">Leaves Remaining</span> :
+          <span style="color: #c5c5c5; font-weight: bold;">{{ profile.remainingLeaveCount }}</span>
+        </div>
+        <div class="right-question">
+          <span class="questio">Total Leaves Per Annum</span> :
+          <span
+            style="color: #272727;font-weight: bold;">{{ profile.takenLeaveCount + profile.remainingLeaveCount }}</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="horizontal-side">
+    Click for clear view
+  </div>
+</section>
+<div class="vertical-card" *ngIf="vertical === 'active'">
+  <div class="vertical-card-container">
+    <div class="container-part" id="part">
+      <div class="progress taken"></div>
+      <div class="part-content">
+        <span class="question">Leaves Taken</span> :
+        <span style="color: #7f00ff; ">{{ profile.takenLeaveCount }}</span>
+      </div>
+    </div>
+    <div class="container-part" id="part">
+      <div class="progress remaining"></div>
+      <div class="part-content">
+        <span class="question">Leaves Remaining</span> :
+        <span style="color: #c5c5c5; ">{{ profile.remainingLeaveCount }}</span>
+      </div>
+    </div>
+    <div class="container-part" id="part">
+      <div class="progress total"></div>
+      <div class="part-content">
+        <span class="question">Total Leaves Per Annum</span> :
+        <span style="color: #272727;">{{ profile.takenLeaveCount + profile.remainingLeaveCount }}</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+.image-img img {
+  height: 5vh;
+}
+
+.active {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.active-worker {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  gap: 10px;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+}
+
+.active-worker:hover {
+  background-color: white;
+  padding: 0.5rem 0.25rem;
+  transition: all .5s;
+  width: 100%;
+}
+
+.active-worker-image {
+  display: grid;
+  place-content: center;
+  height: 5vh;
+  width: 5vh;
+  overflow: hidden;
+  border-radius: 50%;
+  background-image: url(../../../assets/kos.png);
+}
+
+.content-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #7f00ff;
+  margin-bottom: .25rem;
+}
+
+.active-status {
+  height: 15px;
+  width: 15px;
+  background: #1bff00;
+  border-radius: 50%;
+  position: absolute;
+  top: -0.25rem;
+  border: 2px solid #ededed;
+  left: -.15rem;
+}
+
+.active-title {
+  margin: .5rem 0 .25rem;
+  font-size: 1rem;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  color: white;
+  background: #7f00ff;
+  width: 2vh;
+  height: 2vh;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  line-height: 2;
+}

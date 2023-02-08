@@ -1,0 +1,69 @@
+<div class="calender-title">
+  Your Calender
+</div>
+<div class="calender-settings">
+  <select name="filter" placeholder="Filter" id="filter-key">
+    <option value="whole_year">2023</option>
+  </select>
+  <select name="filter" placeholder="Filter" id="filter-key">
+    <option value="whole_year">Jauary</option>
+  </select>
+  <select name="filter" placeholder="Filter" id="filter-key">
+    <option value="whole_year">1</option>
+  </select>
+</div>
+
+<section class="grid">
+  <div class="cal-display">
+    <div class="calender" *ngFor="let calender of calenders">
+      <div class="calender-header">
+        <div class="header-month">
+          {{ calender.month }}
+        </div>
+        <div class="header-legnth">
+          {{ calender.year }}
+        </div>
+      </div>
+      <div class="calender-dates">
+        <div class="calender-dates-day" *ngFor="let day of calender.days">
+          <div class='day-{{day.id}}' id="day">
+            <span *ngFor="let agenda of day.agenda" (click)="handleAgendaDisplay(day.agenda)" id="day-icon">
+              <span *ngIf="agenda.type === 'vacation'" alt="" class="greyscale" id="date" srcset="">🌴</span>
+              <span *ngIf="agenda.type === 'sick'" alt="" class="greyscale" id="date" srcset="">🤒</span>
+              <span *ngIf="agenda.type === 'dayoff'" alt="" class="greyscale" id="date" srcset="">🛌</span>
+              <span *ngIf="agenda.type === 'holiday'" alt="" class="greyscale" id="date" srcset="">🎇</span>
+              <span *ngIf="agenda.type === 'cake'" alt="" class="greyscale" id="date" srcset="">🎂</span>
+            </span>
+            <span (click)="handleAgendaDisplay(day.agenda)" id="day-date">
+              {{ day.id }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="agenda">
+    <div class="agenda-display">
+      <div class="agenda-display-title">
+        Activity
+      </div>
+      <mat-expansion-panel [hideToggle]="false" *ngFor="let agenda of agendaContainer">
+        <mat-expansion-panel-header>
+          <span *ngIf="agenda.type === 'vacation'" alt="" class="greyscale" srcset="">🌴</span>
+          <span *ngIf="agenda.type === 'sick'" alt="" class="greyscale" srcset="">🤒</span>
+          <span *ngIf="agenda.type === 'dayoff'" alt="" class="greyscale" srcset="">🛌</span>
+          <span *ngIf="agenda.type === 'cake'" alt="" class="greyscale" rcset="">🎂</span>
+          <div class="agenda-title">
+            {{ agenda.title }}
+          </div>
+        </mat-expansion-panel-header>
+        <div class="mat-panel-content">
+          {{ agenda.info }}
+        </div>
+      </mat-expansion-panel>
+      <div class="no-agenda" *ngIf="agendaContainer === []">
+        <h2>No Activity</h2>
+      </div>
+    </div>
+  </div>
+</section>

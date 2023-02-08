@@ -1,0 +1,81 @@
+.requests {
+  margin: 2rem 0;
+  background: #ededed !important;
+}
+
+section.requset-cards {
+  margin: 1rem;
+  display: flex;
+  flex-flow: column;
+}
+
+.cards-body {
+  background: #ededed;
+  color: black;
+  padding: .5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.body-from {
+  font-size: 1.23rem;
+  font-weight: 500;
+}
+
+.body-duration {
+  display: flex;
+  flex-flow: row;
+  gap: 1rem;
+  color: #7f00ff;
+  font-weight: bold;
+}
+
+button.mdc-button.mat-mdc-button.mat-unthemed.mat-mdc-button-base {
+  background: red;
+}
+
+mat-expansion-panel-header#mat-expansion-panel-header {
+  padding: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background: #ededed;
+  color: black;
+}
+
+mat-expansion-panel-header#mat-expansion-panel-header-0 {
+  padding: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background: white;
+  color: black;
+  border-radius: 0px;
+}
+
+.mat-expansion-panel-body {
+  background: white !important;
+}
+
+div#cdk-accordion-child-0 {
+  background: white;
+}
+
+.mat-expansion-panel:not([class*=mat-elevation-z]) {
+  box-shadow: unset !important;
+  filter: drop-shadow(0px 0px 0px #ededed);
+}
+
+mat-expansion-panel.mat-expansion-panel.ng-tns-c90-0.ng-star-inserted.mat-expanded.mat-expansion-panel-spacing {
+  background: white;
+}
+
+.badge {
+  height: 2.5vh;
+  width: 2.5vh;
+  margin-left: 10px;
+  background: #7f0fff;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+}

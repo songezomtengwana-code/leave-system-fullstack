@@ -1,0 +1,30 @@
+.layout.grid {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  padding: 2rem;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.layout-section {
+  padding: 2rem;
+}
+
+.layout-section.section-30 {
+  width: 22.5vw;
+  overflow: hidden;
+  display: flex;
+  flex-flow: wrap;
+  border-radius: 20px;
+  background: #ededed;
+}
+
+.layout-section.section-unset {
+  display: flex;
+  flex-flow: column;
+  width: 50vw;
+  height: calc(100vh - 4rem);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}

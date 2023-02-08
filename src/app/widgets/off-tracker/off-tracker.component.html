@@ -1,0 +1,29 @@
+<section class="section">
+  <div class="tracker" (click)="handleToggleTracker()">
+    <div class="tracker-body">
+      <div class="body-header">Your time off</div>
+      <div class="body-content">
+        <section class="content" *ngFor="let tracks of user.offTracking">
+          <div class="content-question">
+            <div class="question-icon">{{ tracks.icon }}</div>{{ tracks.trackName }}
+          </div> : <div class="content-response">
+            {{ tracks.trackUsedCount }}</div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <div class="tracker remainder">
+    <div class="tracker-body">
+      <div class="body-header">Your time off Remaining</div>
+      <div class="body-content">
+        <section class="content" *ngFor="let tracks of user.offTracking">
+          <div class="content-question">
+            <div class="question-icon">{{ tracks.icon }}</div>{{ tracks.trackName }}
+          </div> : <div class="content-response">
+            {{ tracks.trackRemainingCount }}</div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,98 @@
+section.year-tracker.ng-star-inserted {
+  display: flex;
+  flex-flow: column;
+  padding: 2rem;
+  background: #ededed;
+  border-radius: 10px;
+  cursor: pointer;
+  min-width: 12.5vw;
+  align-items: center;
+}
+
+.year {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  margin: 2rem 0;
+}
+
+.header-title {
+  font-size: 20px;
+}
+
+.year-displayer {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.tracker-header {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-year {
+  color: #7f00ff;
+  font-weight: bold;
+}
+
+.trend {
+  display: flex;
+  flex-flow: column;
+  gap: .25rem;
+  align-items: center;
+}
+
+.bar {
+  height: 7.5vh;
+  background: #eded;
+  display: flex;
+  flex-flow: wrap;
+  align-items: flex-end;
+  width: 5px;
+}
+
+.bar-inner {
+  width: 5px;
+  background: #7f00ff;
+}
+
+section.year-tracker:hover {
+  transition: all .5s;
+  filter: brightness(0.5);
+  transform: translateY(5px);
+}
+
+.year-tracker {
+  position: relative;
+}
+
+section.year-tracker:hover~section.year-tracker::after {
+  content: 'full view';
+  position: absolute;
+}
+
+section.year-tracker::after {
+  content: 'full view';
+  position: absolute;
+  color: #c9c9c9;
+  bottom: .5rem;
+}
+
+.pop {
+  display: grid;
+  place-content: center;
+  height: 0vh;
+  transform: translateY(-20px);
+  opacity: 0;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.pop-active {
+  height: max-content !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}

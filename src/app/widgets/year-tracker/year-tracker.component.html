@@ -1,0 +1,26 @@
+<div class="year">
+  <section class="year-tracker" *ngFor="let trends of user.annualTrend" (click)="handlePopTrend(trends)">
+    <div class="tracker-header">
+      <div class="header-title">Annual Trends</div>
+      <div class="header-year">{{ trends.year }}</div>
+    </div>
+    <div class="year-displayer">
+      <div class="trend" *ngFor="let trend of trends.monthlyTrend">
+        <div class="bar">
+          <div class="bar-inner" [style.height]="trend.rate"></div>
+        </div>
+        <div class="intial">
+          {{ trend.month }}
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="pop tool" *ngIf="newTrend">
+  <div class="pop-tracker">
+    <div class="pop-tracker-header">
+      Annual Trends For The Year {{ newTrend.year }}
+    </div>
+  </div>
+</div>

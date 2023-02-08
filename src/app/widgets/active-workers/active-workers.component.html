@@ -1,0 +1,15 @@
+<div class="active">
+  <div class="active-title">
+    Your Team
+  </div>
+  <div class="active-worker" *ngFor="let employee of employees">
+    <div class="active-worker-image">
+      <div class="image-img"><img [src]="employee.photoPath" alt="" srcset=""></div>
+    </div>
+    <div class="active-worker-content">
+      <div class="content-name">{{ employee.fullName }} {{ employee.lastName }}</div>
+      <div class="content-department">{{ employee.department }}</div>
+    </div>
+    <div class="active-notifications badge">{{ employee.remainingLeaveCount }}</div>
+  </div>
+</div>

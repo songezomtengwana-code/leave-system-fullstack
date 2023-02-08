@@ -1,0 +1,31 @@
+<div class="req">
+  <form action="SUBMIT" class="req-form">
+    <div class="form-title">Request Leave</div>
+    <div class="errbox">
+      <div class="errbox-text"></div>
+    </div>
+    <div class="form-body">
+      <div class="form-input">
+        <input type="number" [(ngModel)]="request.date" name="length" aria-required="true" required>
+        <label for="fullname">Date</label>
+      </div>
+      <div class="form-input">
+        <!-- fullname input -->
+        <!-- <input type="text" [(ngModel)]="request.reason" name="fullname" required> -->
+        <select [(ngModel)]="request.reason" [ngModelOptions]="{standalone: true}">
+          <option value="🤒 Sick">🤒 Sick</option>
+          <option value="🎂 Birthday">🎂 Birthday</option>
+          <option value="🌴 Vacation">🌴 Vacation</option>
+          <option value="🛌 Day Off">🛌 Day Off</option>
+          <option value="🎇 Holiday">🎇 Holiday</option>
+        </select>
+        <label for="fullname">Enter reason</label>
+      </div>
+    </div>
+    <div class="form-submit">
+      <button class="submit-button" (click)="postRequest()">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>

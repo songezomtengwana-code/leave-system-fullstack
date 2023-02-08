@@ -1,0 +1,197 @@
+.cal-display {
+  display: flex;
+  flex-flow: row;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  margin: 0 2rem;
+  scroll-snap-align: center;
+  padding-left: 0rem;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
+  max-width: 580px;
+}
+
+.calender {
+  scroll-snap-align: start;
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  padding: 2rem;
+  margin: 1rem;
+  background: #ededed;
+  border-radius: 10px;
+  min-height: 40vh;
+}
+
+.calender-title {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+select#filter-key {
+  margin: 20px;
+  padding: .5rem 1rem;
+  border: 2px solid #7f00ff;
+  border-radius: 5px;
+  margin-right: 1rem;
+  color: #7f00ff;
+}
+
+.calender::-webkit-scrollbar-thumb {
+  height: 1px;
+  color: white;
+}
+
+.calender::-webkit-scrollbar-track {
+  background-color: white;
+  color: white;
+}
+
+.calender::-webkit-scrollbar-button {
+  color: white;
+  background-color: white;
+}
+
+.calender::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+.header-month {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  margin-bottom: .5rem;
+}
+
+.header-legnth {
+  width: 100%;
+  text-align: end;
+  color: gray;
+  font-size: .9rem;
+  font-weight: bold;
+}
+
+.header-leaves {
+  font-weight: bold;
+  color: gray;
+}
+
+.calender-dates {
+  display: flex;
+  flex-flow: revert;
+  width: 493px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.calender-dates-day {
+  height: 7.5vh;
+  width: 7.5vh;
+  font-size: 1.25rem;
+  display: grid;
+  place-content: center;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.calender-dates-day:hover {
+  border: 2px solid #7f00ff50;
+}
+
+.leave {
+  background: #7f00ff !important;
+  color: white !important;
+}
+
+i.bi.bi-airplane {
+  color: #7f00ff;
+}
+
+section.grid {
+  display: flex;
+  flex-flow: row;
+}
+
+.agenda {
+  padding: 2rem 1rem;
+  width: calc(100% - 2rem);
+  border-radius: 10px;
+  margin: 1rem 0 2rem 0;
+}
+
+.agenda-display-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.agenda-display-body {
+  display: flex;
+  flex-flow: column;
+}
+
+.body-content {
+  display: flex;
+  flex-flow: row;
+  gap: 1rem;
+  padding: .75rem 1rem;
+  background: white;
+  filter: drop-shadow(0px 0px 7px #00000020);
+  border-radius: 5px;
+  font-size: 1rem;
+  margin: 1rem;
+  cursor: pointer;
+  transition: all 1s;
+  width: 100%;
+}
+
+span.side-content {
+  font-weight: bold;
+  color: #b3b3b3;
+  filter: drop-shadow(1px 1px 0px #7f00ff);
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.body-cotent-activity {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+div#day {
+  position: relative;
+}
+
+span#day-icon {
+  position: absolute;
+  background: #ededed;
+  padding: 0 0.5rem 0 0;
+  line-height: 1;
+}
+
+span#date {
+  position: absolute;
+  left: -7.5px;
+}
+
+.no-agenda {
+  padding: 3rem;
+  text-align: center;
+  color: #c1c1c1;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.agenda-title {
+  margin-left: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.mat-panel-content {
+  color: black;
+  margin: 1.5rem 0 0;
+}

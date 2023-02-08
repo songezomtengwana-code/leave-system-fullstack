@@ -1,0 +1,65 @@
+<div class="profile">
+  <div class="profile-header">
+    <div class="header-icon">
+      <img [src]="profile.photoPath" alt="" srcset="">
+    </div>
+    <div class="header-about">
+      <div class="about-name">
+        {{profile.firstName}} {{profile.lastName}}
+      </div>
+      <div class="about-tag">
+        @{{ profile.tag }}
+      </div>
+      <div class="about-department">
+        {{ profile.department }}
+      </div>
+      <div class="about-options">
+        <button name="edit" (click)="handleModal()"><i class="bi bi-pencil"></i> edit profile</button>
+      </div>
+    </div>
+  </div>
+  <app-requests></app-requests>
+  <div class="dashboard-cards">
+    <app-dashboard-card horizontal="active"></app-dashboard-card>
+    <app-dashboard-card vertical="active"></app-dashboard-card>
+    <app-off-tracker></app-off-tracker>
+    <app-year-tracker></app-year-tracker>
+  </div>
+</div>
+
+<div class="p-modal">
+  <div class="modal-container">
+    <section class="container-body">
+      <div class="errbox">
+        <div class="errbox-text">
+        </div>
+        <i class="bi bi-x"></i>
+      </div>
+      <!-- errbox content spacer -->
+      <div class="body-content">
+        <div class="input">
+          <input type="text" class="input-text" [placeholder]="profile.firstName" [(ngModel)]="user.firstName">
+          <label for="firstName">Firstname</label>
+        </div>
+        <div class="input">
+          <input type="text" name="lastName" class="input-text" [placeholder]="profile.lastName"
+            [(ngModel)]="user.lastName">
+          <label for="lastName">Lastname</label>
+        </div>
+        <div class="input">
+          <input type="text" name="department" class="input-text" [placeholder]="profile.firstName"
+            [(ngModel)]="user.department">
+          <label for="department">Department</label>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="btn-primary" (click)="handleSaveEdits()">
+          <i class="bi bi-database-fill-check"></i> save
+        </button>
+        <button class="btn-primary-invert" (click)="handleModal()">
+          <i class="bi bi-database-fill-x"></i> cancel
+        </button>
+      </div>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,102 @@
+.req {
+  margin: 1rem 0;
+  width: calc(45.5vh - 4rem);
+}
+
+.form-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.errbox {
+  min-height: 5vh;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 1rem;
+  display: none;
+  background: red;
+  color: white;
+}
+
+form.req-form {
+  padding: 16px;
+  background: white;
+  border-radius: 5px;
+  border: 3px solid transparent;
+}
+
+.form-body {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  gap: 5px;
+}
+
+.form-input {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1.25rem;
+}
+
+input[type="number"] {
+  padding: .5rem;
+  width: 5vw;
+  margin-top: 1vh;
+}
+
+input {
+  padding: .5rem;
+  border: 2px solid transparent;
+  margin-top: 1vh;
+  border-bottom: 2px solid #7f00ff;
+  background: #eded;
+}
+
+select {
+  padding: .5rem;
+  border: 2px solid transparent;
+  margin-top: 1vh;
+  border-bottom: 2px solid #7f00ff;
+  background: #eded;
+  width: 11.5vw;
+  outline: none;
+}
+
+input[type="text"] {
+  width: 11.5vw;
+}
+
+input:hover {
+  background: white;
+  transition: all 1s;
+
+}
+
+.form-submit {
+  display: grid;
+  place-content: center;
+  margin: 1rem 0 .5rem;
+}
+
+button.submit-button {
+  padding: .5rem;
+  width: 17.5vw;
+  background: #ededed;
+  border: 2px solid #ededed;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+button.submit-button:hover {
+  background: #7f00ff;
+  color: white;
+  transition: all 1s;
+}
+
+label {
+  font-weight: bold;
+  color: #7f00ff;
+}
